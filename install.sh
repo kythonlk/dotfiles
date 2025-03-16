@@ -26,6 +26,12 @@ sudo snap install android-studio --classic
 sudo snap install nvim --classic
 sudo snap install beekeeper-studio --classic
 
+echo "🔹 Installing Anydesk..."
+curl -fsSL https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo gpg --dearmor -o /usr/share/keyrings/anydesk-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/anydesk-archive-keyring.gpg] http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk.list
+sudo apt update && sudo apt install anydesk -y
+
+
 echo "🔹 Installing Node.js via NVM..."
 if ! command -v nvm &> /dev/null; then
     curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
