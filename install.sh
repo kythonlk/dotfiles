@@ -2,14 +2,11 @@
 
 echo "🔹 Updating system..."
 sudo apt update && sudo apt upgrade -y
+sudo apt install snapd
 
 echo "🔹 Installing APT packages..."
-sudo apt install -y \
-    anydesk \
-    beekeeper-studio \
-    brave-browser \
+sudo apt install -y 
     chrome-gnome-shell \
-    firefox \
     tmux \
     vlc \
     remmina \
@@ -27,6 +24,7 @@ sudo apt install -y \
 echo "🔹 Installing Snap packages..."
 sudo snap install android-studio --classic
 sudo snap install nvim --classic
+sudo snap install beekeeper-studio --classic
 
 echo "🔹 Installing Node.js via NVM..."
 if ! command -v nvm &> /dev/null; then
