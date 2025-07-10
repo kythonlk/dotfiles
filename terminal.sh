@@ -87,6 +87,11 @@ echo "active_tab_font_style bold-italic" >>$KCF
 echo "active_tab_background #8631B4" >>$KCF
 echo "inactive_tab_foreground #c2c2c2" >>$KCF
 echo "inactive_tab_background #8631B4" >>$KCF
+echo "map ctrl+n new_tab" >>$KCF
+echo "map ctrl+left previous_tab" >>$KCF
+echo "map ctrl+right next_tab" >>$KCF
+echo "mouse_map ctrl+left click ungrabbed mouse_handle_click link" >>$KCF
+
 
 sudo apt update
 curl -sS https://starship.rs/install.sh | sh
